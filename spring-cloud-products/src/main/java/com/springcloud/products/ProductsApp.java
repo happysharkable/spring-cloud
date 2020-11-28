@@ -1,13 +1,13 @@
-package com.springcloud.products.springcloudproducts;
+package com.springcloud.products;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudProductsApplication {
+public class ProductsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudProductsApplication.class, args);
+		SpringApplication.run(ProductsApp.class, args);
 	}
 
 }
