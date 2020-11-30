@@ -1,13 +1,15 @@
-package com.springcloud.products.springcloudproducts;
+package com.springcloud.products;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class SpringCloudProductsApplication {
+@EnableFeignClients
+public class ProductsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudProductsApplication.class, args);
+		SpringApplication.run(ProductsApp.class, args);
 	}
 
 }

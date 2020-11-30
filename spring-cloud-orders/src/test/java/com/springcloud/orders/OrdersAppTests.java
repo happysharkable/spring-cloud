@@ -1,10 +1,10 @@
-package com.springcloud.eureka.service.eurekaserver;
+package com.springcloud.orders;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaServerApplicationTests {
+class OrdersAppTests {
 
 	@Test
 	void contextLoads() {
