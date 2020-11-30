@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @EnableEurekaClient
-public class OrderController {
+public class OrderControllerImpl implements OrderService {
     private List<Order> orders;
     private RestTemplate restTemplate;
 
@@ -63,7 +63,9 @@ public class OrderController {
         OrderDTO orderDTO = new OrderDTO(order.getId(), new ArrayList<>());
         for (OrderItem oi : order.getItems()) {
             OrderItemDTO orderItemDTO = new OrderItemDTO();
-            ProductDTO p = restTemplate.getForObject("http://localhost:19872/products/" + oi.getId().toString(), ProductDTO.class);
+//            ProductDTO p = restTemplate.getForObject("http://localhost:19872/products/" + oi.getId().toString(), ProductDTO.class);
+            String request = "http://products-ms/products/" + oi.getId().toString();
+            ProductDTO p = restTemplate.getForObject(request, ProductDTO.class);
             if (p != null) {
                 orderItemDTO.setTitle(p.getTitle());
                 orderItemDTO.setCost(p.getCost());
