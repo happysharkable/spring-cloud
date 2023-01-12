@@ -12,5 +12,10 @@ class EurekaServerApplicationTests {
 	void testOk() {
 		Assert.isTrue(true, "ok");
 	}
+	
+	@Test
+	void testOk2() {
+		Assert.isTrue(true, "ok");
+	}
 
 }
